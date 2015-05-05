@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+version = '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.oracle.ozark', name: 'ozark', version: '1.0.0-m01'
+    compile group: 'javax.mvc', name: 'javax.mvc-api', version: '1.0-edr1'
+
+    compile group: 'javax.enterprise', name: 'cdi-api', version: '1.2'
+    compile group: 'org.jboss.weld.servlet', name: 'weld-servlet', version: '2.2.11.Final'
+
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.17'
+    compile group: 'org.glassfish.jersey.ext.cdi', name: 'jersey-cdi1x', version: '2.17'
+
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+    compile group: 'com.owlike', name: 'genson', version: '1.3'
+}
