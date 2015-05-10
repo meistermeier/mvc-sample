@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title></title>
+</head>
+<body>
+<!--@thymesVar id="beers" type="java.util.List<com.meistermeier.mvc.beer.model.Beer>"-->
+<ul th:each="beer : ${beers}">
+    <!--@thymesVar id="beer" type="com.meistermeier.mvc.beer.model.Beer"-->
+    <a th:href="@{${beer.id}}" th:text="${beer.name}">nothing</a>
+</ul>
+
+</body>
+</html>
